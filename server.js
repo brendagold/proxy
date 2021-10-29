@@ -8,6 +8,7 @@ const app = express();
 
 // Configuration
 const PORT = process.env.PORT || 3000;
+const HOST = "0.0.0.0"
 let url = "http://universities.hipolabs.com/search?country=Nigeria";
 
 const corsOptions ={
@@ -37,6 +38,6 @@ fetch(url, settings)
 console.log(result);
 
 // Start Proxy
-app.listen(PORT, () => {
+app.listen(PORT, HOST, () => {
   console.log(`Starting Proxy at ${HOST}:${PORT}`);
 });

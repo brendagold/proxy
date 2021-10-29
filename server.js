@@ -17,6 +17,10 @@ const corsOptions ={
 }
 
 app.use(cors(corsOptions));
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 
 let settings = { method: "Get" };
 let result;
@@ -24,7 +28,7 @@ fetch(url, settings)
   .then((res) => res.json())
   .then((json) => {
     
-    app.use("/", (req, res) => {
+    app.get("/", (req, res) => {
         res.send(json);
       });
     

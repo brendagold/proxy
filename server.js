@@ -7,7 +7,6 @@ const app = express();
 
 // Configuration
 const PORT = process.env.PORT || 3000;
-const HOST = process.env.HOST || "localhost";
 let url = "http://universities.hipolabs.com/search?country=Nigeria";
 
 app.use(favicon(__dirname + '/public/favicon.ico'));

@@ -1,11 +1,14 @@
 const fetch = require("node-fetch");
 const express = require("express");
 const cors = require("cors");
+const favicon = require('express-favicon');
 
 
 // Create Express Server
 const app = express();
 
+
+app.use(favicon(__dirname + '/public/favicon.ico'));
 // Configuration
 const PORT = process.env.PORT || 3000;
 const HOST = "0.0.0.0"

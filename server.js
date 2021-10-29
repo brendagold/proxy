@@ -1,5 +1,6 @@
 const fetch = require("node-fetch");
 const express = require("express");
+const favicon = require('express-favicon');
 
 // Create Express Server
 const app = express();
@@ -7,8 +8,9 @@ const app = express();
 // Configuration
 const PORT = process.env.PORT || 3000;
 const HOST = "localhost";
-
 let url = "http://universities.hipolabs.com/search?country=Nigeria";
+
+app.use(favicon(__dirname + '/public/favicon.ico'));
 
 let settings = { method: "Get" };
 let result;

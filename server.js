@@ -16,7 +16,7 @@ let url = "http://universities.hipolabs.com/search?country=Nigeria";
 
 const corsOptions ={
   origin:'*', 
-  credentials:true,            //access-control-allow-credentials:true
+  credentials:true,         //access-control-allow-credentials:true
   optionSuccessStatus:200,
 }
 

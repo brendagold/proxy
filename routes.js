@@ -6,7 +6,7 @@ const routes = express.Router();
 
 let url = "http://universities.hipolabs.com/search?country=Nigeria";
 let settings = { method: "Get" };
-let result;
+
 fetch(url, settings)
   .then((res) => res.json())
   .then((json) => {
@@ -17,7 +17,7 @@ fetch(url, settings)
     
   });
 
-console.log(result);
+
 
 
 

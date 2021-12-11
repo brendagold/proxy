@@ -2,7 +2,6 @@
 const express = require("express");
 const cors = require("cors");
 const favicon = require('express-favicon');
-var cors_proxy = require('cors-anywhere');
 const routes = require('./routes');
 
 
@@ -31,24 +30,6 @@ const PORT = process.env.PORT || 3000;
 const HOST = process.env.HOST || "0.0.0.0"
 
 
-
-// cors_proxy.createServer({
-//     originWhitelist: [], // Allow all origins
-//     requireHeader: ['origin', 'x-requested-with'],
-//     removeHeaders: ['cookie', 'cookie2']
-// })
-
-// const corsOptions ={
-//   origin:'*', 
-//   credentials:true,         //access-control-allow-credentials:true
-//   optionSuccessStatus:200,
-// }
-
-// app.use(cors_proxy.createServer({
-//   originWhitelist: [], // Allow all origins
-//   requireHeader: ['origin', 'x-requested-with'],
-//   removeHeaders: ['cookie', 'cookie2']
-// }));
 app.use(routes);
 
 
